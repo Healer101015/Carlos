@@ -4,7 +4,7 @@ import { Phone, AlertTriangle, Pill, Activity, MessageCircle, Ambulance, Scale, 
 // IMPORTAÇÃO DA IMAGEM DO RELATÓRIO
 // Certifique-se que o arquivo MEDICO.PNG está na pasta src/assets/
 import medicoImg from '../assets/MEDICO.png';
-import euImg from '../assets/eu.png'; // 1. Importe a imagem aqui
+import euImg from '../assets/carlos.png'; // 1. Importe a imagem aqui
 
 const Home = () => {
   // --- DADOS DA CÉLIA ---
@@ -27,10 +27,14 @@ const Home = () => {
       ]
     },
     emergencyContacts: [
-      { name: "Jose Carlos", relation: "Marido", phone: "11933172304" },
+      { name: "Celia Aparecida Monteiro", relation: "Esposa", phone: "5511964095636" },
       { name: "Beatriz Monteiro Vieira", relation: "Filha", phone: "5511913437746" },
-      { name: "Leandro Rojo", relation: "Procurador", phone: "551197642927", address: "Rua Desembargador Carneiro Ribeiro, 48" },
-      { name: "Admir Bernadino Siqueira", relation: "Procurador Alt.", phone: "55119969428995", address: "Av. Waldemar Frietz, 1062 - Apto 211, Cohab Anchieta" }
+
+
+      { name: "Ademir Bernadino Siqueira", relation: "Procurador", phone: "55119969428995", address: "Av. Waldemar Frietz, 1062 - Apto 211, Cohab Anchieta" },
+
+      { name: "Claudinei Santos", relation: "Procurador Alt", phone: "5511927493848", address: "Rua Doutor Emanuel Dias - 258" },
+
     ],
     medicalInfo: {
       allergies: ["Glúten (Grave)", "Paracetamol com Codeína"],
