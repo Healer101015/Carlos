@@ -5,7 +5,7 @@ import {
   FileWarning, Zap, Layout, FileText, HeartPulse, Wind, Stethoscope, Copy
 } from 'lucide-react';
 
-// IMPORTAÇÃO DA FOTO (Relatório removido)
+// IMPORTAÇÃO DA FOTO
 import euImg from '../assets/carlos.png';
 
 const Home = () => {
@@ -48,7 +48,7 @@ const Home = () => {
 
   // --- 2. ALERTAS ---
   const criticalAlerts = useMemo(() => [
-    { text: "NÃO ACEITA TRANSFUSÃO", color: "bg-red-500", border: "border-red-400", icon: <FileWarning size={15} /> },
+    { text: "NÃO ACEITA TRANSFUSÃO", color: "bg-red-600", border: "border-red-400", icon: <FileWarning size={15} /> },
     { text: "TESTEMUNHA DE JEOVÁ", color: "bg-slate-600", border: "border-slate-500", icon: <Scale size={15} /> },
     { text: "HIPERTENSÃO ARTERIAL", color: "bg-rose-500", border: "border-rose-400", icon: <HeartPulse size={15} /> },
     { text: "ASMA BRÔNQUICA", color: "bg-teal-600", border: "border-teal-500", icon: <Wind size={15} /> }
@@ -127,19 +127,34 @@ const Home = () => {
 
       <div className="px-4 -mt-16 relative z-20 max-w-lg mx-auto space-y-5">
 
-        {/* --- CARD DIRETIVA --- */}
-        <div className="glass-card rounded-3xl shadow-lg overflow-hidden animate-fade-in border-l-4 border-red-500 ring-1 ring-slate-200">
-          <div className="p-5">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="bg-red-50 p-2 rounded-lg text-red-600"><FileWarning size={24} /></div>
+        {/* --- CARD DIRETIVA (COM ÊNFASE MÁXIMA) --- */}
+        <div className="bg-white rounded-3xl shadow-xl shadow-red-200 overflow-hidden animate-fade-in border-4 border-red-600 relative ring-4 ring-red-100">
+
+          {/* Cabeçalho de Alerta Piscante */}
+          <div className="bg-red-600 p-5 text-white text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-red-500 animate-pulse opacity-40"></div> {/* Efeito Pulsação no Fundo */}
+
+            <div className="relative z-10 flex flex-col items-center gap-2">
+              <div className="bg-white p-3 rounded-full shadow-lg">
+                <FileWarning size={32} className="text-red-600" />
+              </div>
               <div>
-                <h2 className="text-slate-800 font-bold text-sm uppercase">Diretiva Antecipada</h2>
-                <p className="text-red-500 text-[10px] font-bold uppercase tracking-wide">Protocolo Jurídico</p>
+                <h2 className="text-2xl font-black uppercase tracking-tighter leading-none">Proibido Transfusão</h2>
+                <p className="text-red-100 text-[10px] font-bold uppercase tracking-[0.3em] mt-1">Diretiva Antecipada</p>
               </div>
             </div>
-            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 text-slate-700 text-sm font-medium leading-relaxed italic">
-              "{patientData.medicalInfo.advanceDirective}"
+          </div>
+
+          {/* Conteúdo da Proibição */}
+          <div className="p-5 bg-red-50 text-center">
+            <div className="bg-white border-l-8 border-red-600 rounded-r-xl p-4 shadow-sm text-left mb-3">
+              <p className="text-red-900 font-bold text-sm leading-relaxed italic">
+                "{patientData.medicalInfo.advanceDirective}"
+              </p>
             </div>
+            <p className="text-[10px] text-red-400 font-bold uppercase tracking-wider flex items-center justify-center gap-1">
+              <ShieldAlert size={12} /> Documento em Posse dos Procuradores
+            </p>
           </div>
         </div>
 
