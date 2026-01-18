@@ -31,7 +31,7 @@ const Home = () => {
     medicalInfo: {
       allergies: ["Nenhuma alergia medicamentosa conhecida"],
       medications: [
-        { name: "Olmesartana + Hidroclorotiazida ", dosage: "40mg/12,5mg", time: "Uso Contínuo" },
+        { name: "Olmesartana Medoxomila + Hidroclorotiazida ", dosage: "40mg/12,5mg", time: "Uso Contínuo" },
 
       ],
       insurance: {
