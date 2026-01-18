@@ -25,14 +25,14 @@ const Home = () => {
     emergencyContacts: [
       { name: "Celia Aparecida Monteiro", relation: "Esposa", phone: "5511964095636" },
       { name: "Beatriz Monteiro Vieira", relation: "Filha", phone: "5511913437746" },
-      { name: "Ademir Bernadino Siqueira", relation: "Procurador", phone: "55119969428995", address: "Av. Waldemar Frietz, 1062 - Cohab Anchieta" },
+      { name: "Admir Bernadino Siqueira", relation: "Procurador", phone: "55119969428995", address: "Av. Waldemar Frietz, 1062 - Cohab Anchieta" },
       { name: "Claudinei Santos", relation: "Procurador Alt", phone: "5511927493848", address: "Rua Doutor Emanuel Dias - 258" },
     ],
     medicalInfo: {
       allergies: ["Nenhuma alergia medicamentosa conhecida"],
       medications: [
-        { name: "Alenia", dosage: "12mcg/400mcg", time: "Uso Contínuo" },
-        { name: "Olmesartana + Hidroclorotiazida", dosage: "40mg/12,5mg", time: "Uso Contínuo" }
+        { name: "Olmesartana + Hidroclorotiazida ", dosage: "40mg/12,5mg", time: "Uso Contínuo" },
+
       ],
       insurance: {
         sus: { number: "898 0014 3779 8618 1" }
@@ -119,7 +119,7 @@ const Home = () => {
 
           <div className="flex gap-2 mt-2 opacity-80">
             <span className="bg-white/10 px-3 py-1 rounded-lg text-[10px] font-bold border border-white/10">{patientData.personalInfo.birthDate}</span>
-            <span className="bg-white/10 px-3 py-1 rounded-lg text-[10px] font-bold border border-white/10">60 ANOS</span>
+            <span className="bg-white/10 px-3 py-1 rounded-lg text-[10px] font-bold border border-white/10">59 ANOS</span>
             <span className="bg-white/10 px-3 py-1 rounded-lg text-[10px] font-bold border border-white/10">Aposentado</span>
           </div>
         </div>
